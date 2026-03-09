@@ -6,13 +6,27 @@ title: Overview
 
 # Road Stat API
 
-Road Stat is a research project that aggregates the Department for Transport's Street Manager data, making it simple to explore street works activity across England.
+Hi, I'm Chris and I'd like to introduce Road Stat.
 
-In the context of the **National Data Library**, and the wider push to find better ways to use public sector data, we believe that Street Manager is an extremely valuable source of information. 
+It's a small research project that I've wanted to do for a while.
+
+The main aim: Exploring better USRN based data products
+
+Project focus: Aggregating the Department for Transport's Street Manager data, making it simple to explore street works activity across England.
+
+In the context of the **National Data Library**, and the wider push to find better ways to use public sector data, I believe that Street Manager is an extremely valuable source of information. 
 
 It captures every permit, every road closure, and every utility company work across the English road network.
 
-Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months we'll be trialling access and conducting user research to understand how this data can best serve use cases in the street works, planning, and transport sectors.
+Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months trial access will be provided and user research conducted to understand how this data can best serve use cases in the infrastructure, planning, and transport sectors.
+
+I've been inspired by Benn Stancil's [Producer Theory](https://benn.substack.com/p/producer-theory) post and the idea that the most valuable nodes in a data ecosystem are *"the ones that push the most new intelligence back to the group — either by being a unique source of raw information, or by learning clever new things from other people's information."* 
+
+It's a direction I'd personally like to explore this year and something I hope this project can achieve.
+
+## Project Sponsor
+
+This project wouldn't be possible without the kind support and guidance of Neil Brammall and [Utility Information Services](https://www.utilityinformationservices.com).
 
 ## Why USRNs matter
 
@@ -32,11 +46,7 @@ There's a gap between the raw data and the insights. We need more USRN data prod
 - **Accessible**
 - **Aggregated**
 
-Creating aggregated statistics from Street Manager data at the USRN level is a natural fit — it slots directly into the already existing data ecosystem that councils, utilities, and transport planners rely on every day.
-
-We've been inspired by Benn Stancil's [Producer Theory](https://benn.substack.com/p/producer-theory) — the idea that the most valuable nodes in a data ecosystem are *"the ones that push the most new intelligence back to the group — either by being a unique source of raw information, or by learning clever new things from other people's information."* 
-
-That's a direction I'd like to explore this year and something I hope this project can achieve.
+Creating aggregated statistics from Street Manager data at the USRN level is a natural fit — it slots directly into our already existing data ecosystem making use of national linked identifiers such as the USRN.
 
 ## Future endpoints
 
