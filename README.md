@@ -1,1 +1,3 @@
-# [Road Stat API Docs](https://chriscarlon.github.io/road-stat-docs/)
+# Road Stat API Docs
+
+[Link](https://chriscarlon.github.io/road-stat-docs/)
