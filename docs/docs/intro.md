@@ -1,0 +1,54 @@
+---
+slug: /
+sidebar_position: 1
+title: Overview
+---
+
+# Road Stat API
+
+Road Stat is a research project that aggregates the Department for Transport's Street Manager data, making it simple to explore street works activity across England.
+
+In the context of the **National Data Library**, and the wider push to find better ways to use public sector data, we believe that Street Manager is an extremely valuable source of information. 
+
+It captures every permit, every road closure, and every utility company work across the English road network.
+
+Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months we'll be trialling access and conducting user research to understand how this data can best serve use cases in the street works, planning, and transport sectors.
+
+## Why USRNs matter
+
+Every street in England has a **Unique Street Reference Number (USRN)**.
+
+USRNs are maintained by **GeoPlace** as part of the **National Street Gazetteer (NSG)**, built on the **BS7666** standard. They underpin Street Manager, integrate into the **Ordnance Survey National Geographic Database (NGD)**, and are  woven into the fabric of how location data works across the public sector for highways.
+
+By aggregating Street Manager permit data at the USRN level, the API provides a clear picture of what's happening on any given street — who's digging and how often.
+
+## The case for better USRN data products
+
+Street Manager holds a wealth of data, but consuming it at scale can be quite difficult at times.
+
+There's a gap between the raw data and the insights. We need more USRN data products that are:
+
+- **Easily consumed**
+- **Accessible**
+- **Aggregated**
+
+Creating aggregated statistics from Street Manager data at the USRN level is a natural fit — it slots directly into the already existing data ecosystem that councils, utilities, and transport planners rely on every day.
+
+We've been inspired by Benn Stancil's [Producer Theory](https://benn.substack.com/p/producer-theory) — the idea that the most valuable nodes in a data ecosystem are *"the ones that push the most new intelligence back to the group — either by being a unique source of raw information, or by learning clever new things from other people's information."* 
+
+That's a direction I'd like to explore this year and something I hope this project can achieve.
+
+## Future endpoints
+
+We're working on additional endpoints to enrich USRN-level data:
+
+- **UPRN counts per USRN** — number of unique property reference numbers on a street, giving a sense of how many properties are affected by works.
+- **Bus services per USRN** — using Bus Open Data Service open data to show which bus services run on a particular USRN and are impacted by  works.
+
+## Get involved
+
+If you're interested in using Road Stat, participating in user research, or have ideas for how this data could be used, get in touch at:  **chriscarlon@icloud.com**.
+
+---
+
+Street Manager data is available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
