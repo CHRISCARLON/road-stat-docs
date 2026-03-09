@@ -10,15 +10,15 @@ Hi, I'm Chris and I'd like to introduce Road Stat.
 
 It's a small research project that I've wanted to do for a while.
 
-The main aim: Exploring better USRN based data products
+<span style={{backgroundColor: '#b8e6c8', padding: '4px 8px', fontWeight: 'bold'}}>The main aim:</span> Explore aggregated data products at a USRN level.
 
-Project focus: Aggregating the Department for Transport's Street Manager data, making it simple to explore street works activity across England.
+<span style={{backgroundColor: '#ffd4a8', padding: '4px 8px', fontWeight: 'bold'}}>Project focus:</span> Aggregate the Department for Transport's Street Manager data and make it simple to explore street works activity across England.
 
 In the context of the **National Data Library**, and the wider push to find better ways to use public sector data, I believe that Street Manager is an extremely valuable source of information. 
 
-It captures every permit, every road closure, and every utility company work across the English road network.
+It captures every permit, every road closure, and every utility company work across England's publicly maintained highway network.
 
-Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months trial access will be provided and user research conducted to understand how this data can best serve use cases in the infrastructure, planning, and transport sectors.
+Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months trial access will be provided and user research conducted to understand how this data can be used best.
 
 I've been inspired by Benn Stancil's [Producer Theory](https://benn.substack.com/p/producer-theory) post and the idea that the most valuable nodes in a data ecosystem are *"the ones that push the most new intelligence back to the group — either by being a unique source of raw information, or by learning clever new things from other people's information."* 
 
@@ -45,8 +45,6 @@ There's a gap between the raw data and the insights. We need more USRN data prod
 - **Easily consumed**
 - **Accessible**
 - **Aggregated**
-
-Creating aggregated statistics from Street Manager data at the USRN level is a natural fit — it slots directly into our already existing data ecosystem making use of national linked identifiers such as the USRN.
 
 ## Future endpoints
 
