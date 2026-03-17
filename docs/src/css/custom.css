@@ -1,11 +1,11 @@
 :root {
-  --ifm-color-primary: #0000ff;
-  --ifm-color-primary-dark: #0000dd;
-  --ifm-color-primary-darker: #0000bb;
-  --ifm-color-primary-darkest: #000099;
-  --ifm-color-primary-light: #2222ff;
-  --ifm-color-primary-lighter: #4444ff;
-  --ifm-color-primary-lightest: #6666ff;
+  --ifm-color-primary: #FFAA7A;
+  --ifm-color-primary-dark: #FF9660;
+  --ifm-color-primary-darker: #FF8A52;
+  --ifm-color-primary-darkest: #FF7A3E;
+  --ifm-color-primary-light: #FFB98E;
+  --ifm-color-primary-lighter: #FFC8A2;
+  --ifm-color-primary-lightest: #FFD8BB;
   --ifm-background-color: #ffffff;
   --ifm-font-color-base: #000000;
   --ifm-code-font-size: 95%;
@@ -13,7 +13,7 @@
   --ifm-heading-font-family: 'IBM Plex Mono', monospace;
   --ifm-font-size-base: 16px;
   --ifm-border-radius: 0;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 255, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 140, 66, 0.1);
 }
 
 /* Neo-brutalist borders */
@@ -25,7 +25,7 @@
 
 .footer--dark {
   border-top: 3px solid #000000;
-  background-color: #0000ff;
+  background-color: #FF8C42;
   color: #ffffff;
 }
 
@@ -51,7 +51,7 @@ table td {
 }
 
 table th {
-  background-color: #0000ff;
+  background-color: #FF8C42;
   color: #ffffff;
 }
 
@@ -87,7 +87,7 @@ a {
 }
 
 .menu__link--active {
-  background-color: #0000ff;
+  background-color: #FF8C42;
   color: #ffffff !important;
 }
 
