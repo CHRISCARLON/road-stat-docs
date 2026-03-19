@@ -20,10 +20,6 @@ It captures every permit, every road closure, and every utility company work acr
 
 Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months trial access will be provided and user research conducted to understand how this data can be used best.
 
-I've been inspired by Benn Stancil's [Producer Theory](https://benn.substack.com/p/producer-theory) post and the idea that the most valuable nodes in a data ecosystem are *"the ones that push the most new intelligence back to the group — either by being a unique source of raw information, or by learning clever new things from other people's information."* 
-
-It's a direction I'd personally like to explore this year and something I hope this project can achieve.
-
 ## Project Sponsor
 
 This project wouldn't be possible without the kind support and guidance of Neil Brammall and [Utility Information Services](https://www.utilityinformationservices.com).
