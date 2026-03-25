@@ -43,6 +43,7 @@ pre {
 /* Bold table borders */
 table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 table th,
