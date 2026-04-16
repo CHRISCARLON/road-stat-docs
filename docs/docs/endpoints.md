@@ -154,7 +154,7 @@ Soil attribution data from the National Soil Dataset matched to a USRN.
 
 **Potential use cases:**
 - Understand ground conditions on a street before planning works
-- Correlate soil and drainage characteristics with permit complexity or duration
+- Draw possible relationships between asset health & reinstatements
 
 | Field | Description |
 |-------|-------------|
