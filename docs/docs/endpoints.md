@@ -177,3 +177,61 @@ Soil attribution data from the National Soil Dataset matched to a USRN.
 ```
 
 > **Data source:** National Soil Dataset from [Cranfield University's LandIS Portal](https://www.landis.org.uk), available under the LandIS Open Licence.
+
+---
+
+## GET `/usrn-naptan`
+
+NaPTAN bus stop data matched to a USRN.
+
+**Potential use cases:**
+- Identify whether a street has nearby bus stops before planning works
+- Assess public transport impact of permits on a given street
+
+| Field | Description |
+|-------|-------------|
+| `usrn` | Unique Street Reference Number |
+| `street_type` | Whether the USRN is a regular road or motorway |
+| `atco_codes` | List of ATCO codes for matched bus stops |
+| `naptan_codes` | List of NaPTAN codes for matched bus stops |
+| `stop_count` | Total number of bus stops matched to this USRN |
+| `licensing` | Data attribution — Open Government Licence v3.0 (Department for Transport) |
+
+```json
+{
+  "usrn": "string",
+  "street_type": "Regular Road",
+  "atco_codes": ["010A0001", "010A0002"],
+  "naptan_codes": ["0500SW", "0500SX"],
+  "stop_count": 2,
+  "licensing": "Contains NaPTAN data © Department for Transport, licensed under the Open Government Licence v3.0."
+}
+```
+
+> **Data source:** [National Public Transport Access Nodes (NaPTAN)](https://www.data.gov.uk/dataset/ff93ffc1-6656-47d8-9155-85ea0b8f2251/national-public-transport-access-nodes-naptan), published by the Department for Transport. Bus stops are matched to USRNs within a 10m buffer.
+
+---
+
+## GET `/uprns-per-usrn`
+
+UPRN count for a USRN, derived from OS Linked Identifiers.
+
+**Potential use cases:**
+- Assess community impact of works on streets with high property counts
+- Prioritise communications for permits affecting densely populated streets
+
+| Field | Description |
+|-------|-------------|
+| `usrn` | Unique Street Reference Number |
+| `uprn_count` | Number of Unique Property Reference Numbers linked to this USRN |
+| `licensing` | Data attribution — Open Government Licence v3.0 (Ordnance Survey) |
+
+```json
+{
+  "usrn": "string",
+  "uprn_count": 142,
+  "licensing": "Contains data from the Open USRN dataset and Open Linked Identifiers dataset, licensed under the Open Government Licence v3.0."
+}
+```
+
+> **Data source:** [OS Linked Identifiers](https://www.ordnancesurvey.co.uk/products/os-linked-identifiers) from Ordnance Survey, available under the Open Government Licence v3.0.
