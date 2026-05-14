@@ -10,19 +10,19 @@ Hi, I'm Chris and I'd like to introduce Road Stat.
 
 It's a small research project that I've wanted to do for a while.
 
-<span style={{backgroundColor: '#b8e6c8', padding: '4px 8px', fontWeight: 'bold'}}>The main aim:</span> An API for exposing datasets matched to Unique Street Reference Numbers (USRNs).
+<span style={{backgroundColor: 'var(--rs-yellow)', color: 'var(--rs-ink)', padding: '3px 8px', fontWeight: '600', fontFamily: 'var(--ifm-font-family-monospace)', fontSize: '0.82rem', letterSpacing: '0.04em', textTransform: 'uppercase', borderRadius: '3px'}}>Main aim</span> An API for exposing datasets matched to Unique Street Reference Numbers (USRNs).
 
-<span style={{backgroundColor: '#ffd4a8', padding: '4px 8px', fontWeight: 'bold'}}>Project focus:</span> Aggregate data at a USRN level and simplify how developers access it.
+<span style={{backgroundColor: 'var(--rs-yellow)', color: 'var(--rs-ink)', padding: '3px 8px', fontWeight: '600', fontFamily: 'var(--ifm-font-family-monospace)', fontSize: '0.82rem', letterSpacing: '0.04em', textTransform: 'uppercase', borderRadius: '3px'}}>Project focus</span> Aggregate data at a USRN level and simplify how developers access it.
 
 In the context of the **National Data Library**, and the wider push to find better ways to use public sector data, I believe that Unique Street Reference Numbers are an extremely valuable source of information. 
 
 Road Stat is an experiment in aggregating this data and making it more accessible to analysts and developers. Over the next 6 months trial access will be provided and user research conducted to understand how this data can be used best.
 
-## Project Sponsor
+## Project Sponsor:
 
 This project wouldn't be possible without the kind support and guidance of Neil Brammall and [Utility Information Services](https://www.utilityinformationservices.com).
 
-## Why USRNs matter
+## Why USRNs matter:
 
 Every street in England has a **Unique Street Reference Number (USRN)**.
 
@@ -30,7 +30,7 @@ USRNs are maintained by **GeoPlace** as part of the **National Street Gazetteer 
 
 Because USRNs are the common key across so many public sector datasets, they're a natural anchor point for joining and enriching data — whether that's street works activity, soil conditions, transport access, or property information.
 
-## The case for USRN-matched data products
+## The case for USRN-matched data products:
 
 Many valuable public datasets exist in isolation. Consuming them at scale, and matching them to a consistent street-level reference, can be difficult.
 
@@ -40,7 +40,7 @@ Road Stat is an attempt to close that gap by matching datasets to USRNs and expo
 - **Accessible**
 - **Matched to a common street reference**
 
-## Datasets
+## Datasets:
 
 The API currently exposes the following datasets matched to USRNs:
 
@@ -51,7 +51,7 @@ The API currently exposes the following datasets matched to USRNs:
 
 See the [Endpoints](./endpoints) page for full details. For planned future datasets, see the [Roadmap](./roadmap) page.
 
-## Get involved
+## Get involved:
 
 If you're interested in using Road Stat, participating in user research, or have ideas for how this data could be used, get in touch at:  **chriscarlon@icloud.com**.
 

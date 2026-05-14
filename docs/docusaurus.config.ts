@@ -4,11 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Road Stat API',
-  tagline: 'API Documentation',
-
-  future: {
-    v4: true,
-  },
+  tagline: 'Open research data matched to USRNs',
 
   url: 'https://chriscarlon.github.io',
   baseUrl: '/road-stat-docs/',
@@ -19,6 +15,8 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+
+  favicon: 'img/favicon.svg',
 
   headTags: [
     {
@@ -40,7 +38,14 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700;800&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        href: 'img/apple-touch-icon.png',
       },
     },
   ],
@@ -69,21 +74,73 @@ const config: Config = {
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: true,
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
+    announcementBar: {
+      id: 'research-preview-v3',
+      content:
+        'Road Stat is currently free to use. <a href="mailto:chriscarlon@icloud.com">Get in touch</a> to participate and give feedback.',
+      isCloseable: true,
     },
     navbar: {
       title: 'Road Stat API',
+      logo: {
+        alt: 'Road Stat API',
+        src: 'img/logo-light.svg',
+        srcDark: 'img/logo-dark.svg',
+        height: 28,
+      },
+      hideOnScroll: false,
       items: [
         {
           href: 'https://github.com/CHRISCARLON/road-stat-docs',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+          label: 'GitHub',
         },
       ],
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Road Stat API. Built with Docusaurus.`,
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {label: 'Overview', to: '/'},
+            {label: 'Endpoints', to: '/endpoints'},
+            {label: 'Roadmap', to: '/roadmap'},
+          ],
+        },
+        {
+          title: 'Project',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/CHRISCARLON/road-stat-docs',
+            },
+            {
+              label: 'Get in touch',
+              href: 'mailto:chriscarlon@icloud.com',
+            },
+          ],
+        },
+        {
+          title: 'Data',
+          items: [
+            {
+              label: 'Open Government Licence v3',
+              href: 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+            },
+            {
+              label: 'GeoPlace / NSG',
+              href: 'https://www.geoplace.co.uk',
+            },
+          ],
+        },
+      ],
+      copyright: `RoadStat API`,
     },
     prism: {
       theme: prismThemes.github,

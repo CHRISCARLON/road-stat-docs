@@ -1,110 +1,381 @@
+/* ============================================================
+   Road Stat API — Docusaurus theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/* ----------------------------------------------------------------
+   Brand tokens
+   ---------------------------------------------------------------- */
 :root {
-  --ifm-color-primary: #FFAA7A;
-  --ifm-color-primary-dark: #FF9660;
-  --ifm-color-primary-darker: #FF8A52;
-  --ifm-color-primary-darkest: #FF7A3E;
-  --ifm-color-primary-light: #FFB98E;
-  --ifm-color-primary-lighter: #FFC8A2;
-  --ifm-color-primary-lightest: #FFD8BB;
-  --ifm-background-color: #ffffff;
-  --ifm-font-color-base: #000000;
-  --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'IBM Plex Mono', monospace;
-  --ifm-heading-font-family: 'IBM Plex Mono', monospace;
-  --ifm-font-size-base: 16px;
-  --ifm-border-radius: 0;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 140, 66, 0.1);
+  --rs-yellow:       #ffd23f;
+  --rs-yellow-shade: #c58f1a;
+  --rs-yellow-deep:  #9c7008;
+  --rs-ink:          #15171c;
+  --rs-asphalt:      #2d2f37;
+  --rs-cream:        #f5f3ec;
+  --rs-line:         #d4d1c4;
+  --rs-muted:        #6b6f78;
+  --rs-caution:      #e23b3b;
+  --rs-green:        #1f8a5b;
+
+  --ifm-font-family-base: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --ifm-font-family-monospace: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --ifm-color-primary:          #9c7008;
+  --ifm-color-primary-dark:     #8c6507;
+  --ifm-color-primary-darker:   #845f07;
+  --ifm-color-primary-darkest:  #6d4e06;
+  --ifm-color-primary-light:    #ac7c09;
+  --ifm-color-primary-lighter:  #b4810a;
+  --ifm-color-primary-lightest: #cc9213;
+
+  --ifm-background-color:         var(--rs-cream);
+  --ifm-background-surface-color: #ffffff;
+  --ifm-color-content:            var(--rs-ink);
+  --ifm-color-content-secondary:  var(--rs-muted);
+  --ifm-heading-color:            var(--rs-ink);
+  --ifm-link-color:               var(--rs-yellow-deep);
+  --ifm-link-hover-color:         var(--rs-yellow-shade);
+
+  --ifm-code-font-size: 92%;
+  --ifm-code-background: rgba(21, 23, 28, 0.06);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 210, 63, 0.18);
+
+  --ifm-navbar-background-color: var(--rs-cream);
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: var(--rs-ink);
+  --ifm-footer-color: var(--rs-cream);
+  --ifm-footer-link-color: var(--rs-yellow);
+  --ifm-footer-title-color: #ffffff;
+
+  --ifm-global-radius: 4px;
+  --ifm-button-border-radius: 4px;
+  --ifm-card-border-radius: 6px;
 }
 
-/* Neo-brutalist borders */
-.navbar {
-  border-bottom: 3px solid #000000;
-  box-shadow: none;
-  background-color: #ffffff;
+/* ----------------------------------------------------------------
+   Dark mode
+   ---------------------------------------------------------------- */
+[data-theme='dark'] {
+  --ifm-color-primary:          #ffd23f;
+  --ifm-color-primary-dark:     #ffc91f;
+  --ifm-color-primary-darker:   #f0bb15;
+  --ifm-color-primary-darkest:  #c89c12;
+  --ifm-color-primary-light:    #ffd959;
+  --ifm-color-primary-lighter:  #ffdf73;
+  --ifm-color-primary-lightest: #ffe797;
+
+  --ifm-background-color:         #0f1115;
+  --ifm-background-surface-color: var(--rs-asphalt);
+  --ifm-color-content:            #e7e9ee;
+  --ifm-color-content-secondary:  #8a8f9a;
+  --ifm-heading-color:            #ffffff;
+  --ifm-link-color:               var(--rs-yellow);
+  --ifm-link-hover-color:         var(--rs-yellow-shade);
+  --ifm-navbar-background-color:  var(--rs-ink);
+  --ifm-footer-background-color:  #0a0c10;
+
+  --ifm-code-background: rgba(255, 210, 63, 0.10);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 210, 63, 0.18);
 }
 
-.footer--dark {
-  border-top: 3px solid #000000;
-  background-color: #FF8C42;
-  color: #ffffff;
+/* ----------------------------------------------------------------
+   Base typography
+   ---------------------------------------------------------------- */
+html {
+  font-feature-settings: "ss01", "cv11";
 }
 
-.footer--dark a {
-  color: #ffffff;
-}
-
-/* Chunky code blocks */
-pre {
-  border: 2px solid #000000;
-  border-radius: 0 !important;
-  background-color: #f5f5f5 !important;
-}
-
-/* Bold table borders */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-table th,
-table td {
-  border: 2px solid #000000 !important;
-}
-
-table th {
-  background-color: #FF8C42;
-  color: #ffffff;
-}
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-
-/* Links */
-a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
-}
-
-.navbar a,
-.footer a {
-  text-decoration: none;
-}
-
-.navbar a:hover,
-.footer a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
-/* Sidebar */
-.menu__link {
-  border-radius: 0;
+  font-family: var(--ifm-font-family-monospace);
   font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+/* ----------------------------------------------------------------
+   Navbar
+   ---------------------------------------------------------------- */
+.navbar {
+  border-bottom: 3px solid var(--rs-ink);
+  box-shadow: 0 3px 0 var(--rs-yellow);
+  padding: 0.6rem 1.2rem;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 3px solid var(--rs-yellow);
+  box-shadow: 0 3px 0 rgba(255, 210, 63, 0.25);
+}
+
+.navbar__title {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.navbar__logo {
+  height: 28px;
+  margin-right: 0.5rem;
+}
+
+.navbar__logo img {
+  height: 28px;
+  width: auto;
+}
+
+/* ----------------------------------------------------------------
+   Announcement bar — beta badge strip
+   ---------------------------------------------------------------- */
+div[class*='announcementBar'] {
+  background: var(--rs-yellow);
+  color: var(--rs-ink);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--rs-ink);
+}
+
+div[class*='announcementBar'] a {
+  color: var(--rs-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+[data-theme='dark'] div[class*='announcementBar'] {
+  background: var(--rs-asphalt);
+  color: var(--rs-yellow);
+  border-bottom: 2px solid var(--rs-yellow);
+}
+
+[data-theme='dark'] div[class*='announcementBar'] a {
+  color: var(--rs-yellow);
+}
+
+/* ----------------------------------------------------------------
+   Buttons
+   ---------------------------------------------------------------- */
+.button {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--rs-ink);
+  box-shadow: 3px 3px 0 var(--rs-ink);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.button:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--rs-ink);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.button--primary {
+  background: var(--rs-yellow);
+  color: var(--rs-ink);
+}
+
+.button--secondary {
+  background: var(--rs-cream);
+  color: var(--rs-ink);
+}
+
+[data-theme='dark'] .button {
+  border-color: var(--rs-yellow);
+  box-shadow: 3px 3px 0 var(--rs-yellow);
+}
+
+[data-theme='dark'] .button--primary {
+  background: var(--rs-yellow);
+  color: var(--rs-ink);
+}
+
+[data-theme='dark'] .button--secondary {
+  background: var(--rs-asphalt);
+  color: var(--rs-cream);
+}
+
+/* ----------------------------------------------------------------
+   Code blocks
+   ---------------------------------------------------------------- */
+code {
+  font-family: var(--ifm-font-family-monospace);
+  font-feature-settings: "zero" 1;
+  padding: 0.12em 0.4em;
+  border-radius: 3px;
+}
+
+pre,
+pre code {
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* Bold+code labels — e.g. **`field_name`** — styled as yellow badges */
+.markdown strong > code {
+  background-color: var(--rs-yellow);
+  color: var(--rs-ink);
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.theme-code-block {
+  border: 1px solid var(--rs-line);
+  border-radius: 6px;
+}
+
+[data-theme='dark'] .theme-code-block {
+  border-color: rgba(255, 210, 63, 0.18);
+}
+
+/* ----------------------------------------------------------------
+   Admonitions
+   ---------------------------------------------------------------- */
+.admonition,
+.theme-admonition {
+  border-radius: 6px;
+  border-left-width: 6px;
+  box-shadow: 3px 3px 0 var(--rs-ink);
+}
+
+[data-theme='dark'] .admonition,
+[data-theme='dark'] .theme-admonition {
+  box-shadow: 3px 3px 0 rgba(255, 210, 63, 0.4);
+}
+
+/* ----------------------------------------------------------------
+   Sidebar
+   ---------------------------------------------------------------- */
+.menu__link {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.table-of-contents__link {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.72rem;
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .menu__link--active {
-  background-color: #FF8C42;
-  color: #ffffff !important;
+  background: var(--rs-yellow);
+  color: var(--rs-ink) !important;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-/* Mobile */
+.menu__link--active:hover {
+  background: var(--rs-yellow-shade);
+  color: var(--rs-ink) !important;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background: var(--rs-yellow);
+  color: var(--rs-ink) !important;
+}
+
+
+/* ----------------------------------------------------------------
+   Footer
+   ---------------------------------------------------------------- */
+.footer {
+  border-top: 3px solid var(--rs-yellow);
+}
+
+.footer__title {
+  font-family: var(--ifm-font-family-monospace);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ----------------------------------------------------------------
+   Hero banner (used on intro page if wrapped in .rs-hero)
+   ---------------------------------------------------------------- */
+.rs-hero {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--rs-ink) 0 28px,
+      var(--rs-yellow) 28px 56px
+    ) bottom / 100% 6px no-repeat,
+    var(--rs-cream);
+  padding: 72px 48px 56px;
+  border-bottom: 3px solid var(--rs-ink);
+  margin: -1.5rem -1.5rem 2rem;
+}
+
+[data-theme='dark'] .rs-hero {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--rs-yellow) 0 28px,
+      var(--rs-ink) 28px 56px
+    ) bottom / 100% 6px no-repeat,
+    var(--rs-asphalt);
+}
+
+/* ----------------------------------------------------------------
+   Beta / research badge helper
+   ---------------------------------------------------------------- */
+.rs-badge {
+  display: inline-block;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1.5px solid var(--rs-ink);
+  border-radius: 3px;
+  background: var(--rs-yellow);
+  color: var(--rs-ink);
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+[data-theme='dark'] .rs-badge {
+  border-color: var(--rs-yellow);
+  background: transparent;
+  color: var(--rs-yellow);
+}
+
+/* ----------------------------------------------------------------
+   Mobile
+   ---------------------------------------------------------------- */
 @media (max-width: 768px) {
   :root {
-    --ifm-font-size-base: 14px;
+    --ifm-font-size-base: 15px;
   }
 
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.2rem; }
 
   table {
     display: block;

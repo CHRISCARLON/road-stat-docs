@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: Roadmap
 ---
 
@@ -7,9 +7,9 @@ title: Roadmap
 
 This page outlines datasets we're planning to add to the API. All future endpoints will follow the same pattern — datasets matched and exposed at the USRN level.
 
-## Planned datasets
+## Planned datasets:
 
-### Bus services per USRN
+### Bus services per USRN:
 
 Using open data from the [Bus Open Data Service (BODS)](https://www.bus-data.dft.gov.uk), this endpoint would show which registered bus services operate along a given USRN (this would make use of the matched NapTAN data)
 
@@ -17,6 +17,6 @@ Using open data from the [Bus Open Data Service (BODS)](https://www.bus-data.dft
 
 ---
 
-## Get involved
+## Get involved:
 
 If you have ideas for additional datasets that would be valuable at the USRN level, get in touch at **chriscarlon@icloud.com**.
