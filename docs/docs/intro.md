@@ -47,6 +47,7 @@ The API currently exposes the following datasets matched to USRNs:
 - **Street Manager permit data** — aggregated street works activity from the Department for Transport, covering permits, promoters, traffic management, and road closures across England.
 - **National Soil Dataset** — soil attribution data from Cranfield University's LandIS Portal (Open Data), including geology, soilscape, drainage classification, and drainage destination for each USRN.
 - **NaPTAN** — National Public Transport Access Nodes published by the Department for Transport. Stops are matched to each USRN within a 10m buffer, exposing ATCO and NaPTAN codes alongside a stop count.
+- **Bus Open Data Service (BODS)** — active bus services and stops matched to each USRN, including route short names, agency names and NOC codes, ATCO and NaPTAN codes, and active route count. Sourced from the Department for Transport's Bus Open Data Service.
 - **UPRN counts** — number of Unique Property Reference Numbers linked to each USRN, sourced from OS Linked Identifiers.
 
 See the [Endpoints](./endpoints) page for full details. For planned future datasets, see the [Roadmap](./roadmap) page.

@@ -5,9 +5,7 @@ title: Roadmap
 
 # Roadmap
 
-This page outlines datasets we're planning to add to the API. All future endpoints will follow the same pattern — datasets matched and exposed at the USRN level.
-
-More datasets coming soon.
+This page will be updated as new datasets are planned. All future endpoints will follow the same pattern — datasets matched and exposed at the USRN level.
 
 ## Get involved:
 
