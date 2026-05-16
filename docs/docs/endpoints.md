@@ -57,6 +57,8 @@ Permit history for a USRN, broken down by fiscal year.
 }
 ```
 
+> **Data source:** [OS Open USRNs](https://www.ordnancesurvey.co.uk/products/os-open-usrn) from Ordnance Survey and [Street Manager](https://www.streetmanager.org.uk) data from the Department for Transport, both available under the Open Government Licence v3.0.
+
 ---
 
 ## GET `/promoter-usrn-activity`
@@ -114,6 +116,8 @@ Aggregated street works activity for a specific promoter on a given USRN.
 }
 ```
 
+> **Data source:** [OS Open USRNs](https://www.ordnancesurvey.co.uk/products/os-open-usrn) from Ordnance Survey and [Street Manager](https://www.streetmanager.org.uk) data from the Department for Transport, both available under the Open Government Licence v3.0.
+
 ---
 
 ## GET `/usrn-info`
@@ -146,6 +150,8 @@ Street information and all known promoters for a USRN.
   "licensing": "Contains Street Manager data © Department for Transport, licensed under the Open Government Licence v3.0."
 }
 ```
+
+> **Data source:** [OS Open USRNs](https://www.ordnancesurvey.co.uk/products/os-open-usrn) from Ordnance Survey and [Street Manager](https://www.streetmanager.org.uk) data from the Department for Transport, both available under the Open Government Licence v3.0.
 
 ---
 
@@ -210,6 +216,49 @@ NaPTAN bus stop data matched to a USRN.
 ```
 
 > **Data source:** [National Public Transport Access Nodes (NaPTAN)](https://www.data.gov.uk/dataset/ff93ffc1-6656-47d8-9155-85ea0b8f2251/national-public-transport-access-nodes-naptan), published by the Department for Transport. Bus stops are matched to USRNs within a 10m buffer.
+
+---
+
+## GET `/usrn-bods`
+
+Active bus services and stops on a USRN, derived from the Bus Open Data Service (BODS).
+
+**Potential use cases:**
+- Identify which registered bus services could be disrupted by street works on a given street
+- Cross-reference permit data with bus route coverage to assess transport impact
+- Map which agencies operate services along a specific USRN
+
+**Response fields:**
+
+**`usrn`** — Unique Street Reference Number  
+**`street_type`** — The type of USRN (e.g. `"Officially Described Street"`)  
+**`stop_count`** — Total number of active bus stops on this USRN  
+**`naptan_codes`** — List of NaPTAN codes for stops on this USRN  
+**`atco_codes`** — List of ATCO codes for stops on this USRN  
+**`route_ids`** — Internal BODS route IDs for services on this USRN  
+**`route_short_names`** — Short names of bus routes (e.g. `"42"`, `"X10"`)  
+**`agency_names`** — Names of operating agencies  
+**`agency_nocs`** — National Operator Codes (NOCs) for each agency  
+**`active_route_count`** — Number of distinct active routes on this USRN  
+**`licensing`** — Open Government Licence v3.0 (Department for Transport)
+
+```json
+{
+  "usrn": "string",
+  "street_type": "Designated Street Name",
+  "stop_count": 4,
+  "naptan_codes": ["0500SW001", "0500SW002"],
+  "atco_codes": ["010A0001", "010A0002"],
+  "route_ids": [1012, 1087],
+  "route_short_names": ["42", "X10"],
+  "agency_names": ["Arriva North West"],
+  "agency_nocs": ["ANWE"],
+  "active_route_count": 2,
+  "licensing": "Contains BODS data © Department for Transport, licensed under the Open Government Licence v3.0. https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/ | Contains OS data © Crown copyright and database right 2025, licensed under the Open Government Licence v3.0. https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+}
+```
+
+> **Data source:** [Bus Open Data Service (BODS)](https://www.bus-data.dft.gov.uk), published by the Department for Transport. Bus services are matched to USRNs via NaPTAN stop locations.
 
 ---
 
